@@ -1,0 +1,19 @@
+// Sample SCL program for the parser deliverable
+
+int x = 5;
+int y = 3;
+int total = x + y * 2;
+
+print(total);
+
+if (total >= 10) {
+    total = total - 1;
+    print(total);
+} else {
+    total = total + 1;
+}
+
+while (x < 8) {
+    x = x + 1;
+    print(x);
+}
