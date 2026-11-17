@@ -1,19 +1,62 @@
-// Sample SCL program for the parser deliverable
+// Demonstration of the supported SCL statements and data types
+int count = 1;
+int limit = 3;
+int total = 2 + 3 * 4;
+int decimalValue = 8.5;
+int negativeValue = -2;
+int messageNumber = 10;
 
-int x = 5;
-int y = 3;
-int total = x + y * 2;
-
+print("SCL interpreter starting");
 print(total);
+print(decimalValue);
+print(negativeValue);
 
-if (total >= 10) {
-    total = total - 1;
-    print(total);
+count = count + 1;
+print(count);
+
+if (count <= limit) {
+    print("IF branch executed");
 } else {
-    total = total + 1;
+    print("ELSE branch executed");
 }
 
-while (x < 8) {
-    x = x + 1;
-    print(x);
+while (count < limit) {
+    print(count);
+    count = count + 1;
+}
+
+if (count == limit) {
+    print("WHILE loop finished");
+} else {
+    print("Unexpected result");
+}
+
+// Comparison operators can be used in conditions.
+if (total != 0) {
+    print("Not equal works");
+}
+if (total > 10) {
+    print("Greater than works");
+}
+if (total >= 14) {
+    print("Greater than or equal works");
+}
+if (count >= 3) {
+    print("Greater than or equal also works");
+}
+if (count > 2) {
+    print("Greater than works too");
+}
+if (count == 3) {
+    print("Equal works");
+}
+if (count != 4) {
+    print("Not equal works too");
+}
+
+// Force the ELSE branch to execute as well.
+if (count < 0) {
+    print("Unexpected true branch");
+} else {
+    print("ELSE branch executed");
 }
