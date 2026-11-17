@@ -1,19 +1,19 @@
 SCL Interpreter (Python)
 
 Files:
-- scanner.py: turns SCL source into tokens (lexical analysis)
-- parser.py: checks grammar and creates an in-memory parse tree
+- scl_scanner.py: turns SCL source into tokens (lexical analysis)
+- scl_parser.py: checks grammar and creates an in-memory parse tree
 - interpreter.py: executes the parse tree
 - main.py: runs all three stages in order
-- sample_program.scl: sample input
+- sample.scl: sample input
 
 Run the complete interpreter:
-    python main.py sample_program.scl
+    python main.py sample.scl
 
 Run the stages separately:
-    python scanner.py sample_program.scl
-    python parser.py sample_program.json
-    python interpreter.py sample_program_parse_tree.json
+    python scl_scanner.py sample.scl
+    python scl_parser.py sample_program.json
+    python interpreter.py sample_parse_tree.json
 
 Supported syntax:
     int name = expression;
